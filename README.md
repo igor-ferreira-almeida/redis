@@ -65,8 +65,7 @@ adicionar um arquivo caso ainda não exista como o nome __.bash_profile__
 ````
 export JAVA_HOME=$(/usr/libexec/java_home)
 export M2_HOME=$(/usr/local/Cellar/maven/3.6.2/libexec)
-Export REDIS_HOME=$(/usr/local/etc/redis.conf)
-#export PATH="$HOME/Library/Python/3.7/bin:$PATH"
+export REDIS_HOME=$(/usr/local/etc/redis.conf)
 export PATH="$HOME/Library/Python/3.7/bin:$JAVA_HOME/bin:$M2_HOME/bin:$REDIS_HOME:$PATH"
 ````
 
