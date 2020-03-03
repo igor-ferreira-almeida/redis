@@ -69,3 +69,13 @@ export REDIS_HOME=$(/usr/local/etc/redis.conf)
 export PATH="$HOME/Library/Python/3.7/bin:$JAVA_HOME/bin:$M2_HOME/bin:$REDIS_HOME:$PATH"
 ````
 
+Após essas configurações é possível subir o servidor do Redis, com o comando:
+
+```
+$ redis-server
+```
+
+Após subir o servidor basta acessar a linha de comando do Redis para acessar suas funcionalidades
+```
+$ redis-cli
+```
