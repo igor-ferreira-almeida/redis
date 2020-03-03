@@ -89,6 +89,13 @@ SET "CHAVE" VALOR
 SET "total_de_cursos" 105
 ```
 
+#### Múltiplos valores
+
+```
+MSET "CHAVE" VALOR "CHAVE" VALOR
+MSET "total_de_cursos" 105 "quantidade_de_respostas" 144000
+```
+
 ### Buscar
 
 ```
