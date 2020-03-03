@@ -79,3 +79,31 @@ Após subir o servidor basta acessar a linha de comando do Redis para acessar su
 ```
 $ redis-cli
 ```
+
+## Funções Básicas
+
+### Adicionar e atualizar
+
+```
+SET "CHAVE" VALOR
+SET "total_de_cursos" 105
+```
+
+### Buscar
+
+```
+GET "CHAVE"
+GET "total_de_cursos"
+```
+
+### Buscar
+
+```
+DEL "CHAVE"
+GET "total_de_cursos"
+```
+
+### Exibir todas as chaves criadas 
+
+````
+KEYS *
