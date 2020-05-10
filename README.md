@@ -20,6 +20,10 @@ O instalador do Redis no windows já configura um serviço para o servidor do Re
 
 Observação: caso você receba um erro dizendo que o comando redis-cli não foi encontrado após realizar os passos aqui descritos, reinicie o computador e tente utilizar o redis-cli novamente. Isso deve ser suficiente.
 
+Caso haja problema na instalação: Verify that you have sufficient privileges o start system services
+
+Acessar serviços do windows, ache o serviço do redis, dê um duplo clique, na tela que aparecer vá na aba logon e altere para conta do sistema local aplique e clique em retry! Espero ter ajudado! Estava com o mesmo problema.
+
 ### Mac OS
 
 #### Home Brew
