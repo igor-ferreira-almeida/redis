@@ -39,6 +39,53 @@ Launch Redis on computer starts.
 $ ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
 ```
 
+### Docker
+
+#### Docker Compose
+
+```
+version: "3.9"
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+  redis:
+    image: "redis:alpine"
+ ```
+ 
+ ```
+ version: "3.2"
+services:
+
+ redis:
+    image: "redis:alpine"
+
+    command: redis-server --requirepass sOmE_sEcUrE_pAsS
+
+    ports:
+     - "6379:6379"
+
+    volumes:
+     - $PWD/redis-data:/var/lib/redis
+      - $PWD/redis.conf:/usr/local/etc/redis/redis.conf
+
+    environment:
+     - REDIS_REPLICATION_MODE=master
+
+    networks:
+      node_net:
+        ipv4_address: 172.28.1.4
+
+# networking for the Redis container
+networks:
+  node_net:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/16
+ ```
+
 ##### Start Redis server via “launchctl”
 
 ```
