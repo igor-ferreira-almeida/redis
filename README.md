@@ -149,7 +149,7 @@ Após subir o servidor basta acessar a linha de comando do Redis para acessar su
 $ redis-cli
 ```
 
-## Funções Básicas
+## Funções Básicas (String)
 
 ### Adicionar e atualizar
 
@@ -172,14 +172,35 @@ GET "CHAVE"
 GET "total_de_cursos"
 ```
 
-### Buscar
+### Remover
 
 ```
 DEL "CHAVE"
-GET "total_de_cursos"
+DEL "total_de_cursos"
 ```
 
 ### Exibir todas as chaves criadas 
 
-````
+```
 KEYS *
+```
+
+## Funções Básicas (Hash)
+
+
+
+### Adicionar um tempo de expiração
+
+```
+EXPIRE "CHAVE" SECONDS
+EXPIRE "total_de_cursos" 1800 
+```
+
+### Consultar o tempo restante de expiração (Time To Live)
+
+```
+TTL "CHAVE"
+TTL "total_de_cursos" 
+```
+
+
